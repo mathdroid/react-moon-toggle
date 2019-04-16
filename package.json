@@ -3,7 +3,7 @@
     "react": "^16.3"
   },
   "name": "react-moon-toggle",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:mathdroid/react-moon-toggle.git",
   "author": "<muhammad.mustadi@gmail.com>",
