@@ -2,6 +2,8 @@
 
 > Toggle dark mode (or anything) in moon phases
 
+<img src="moon.gif" width="400">
+
 ## Usage
 
 ```js
