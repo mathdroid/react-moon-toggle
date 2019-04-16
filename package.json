@@ -7,5 +7,15 @@
   "main": "index.js",
   "repository": "git@github.com:mathdroid/react-moon-toggle.git",
   "author": "<muhammad.mustadi@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "react-component",
+    "react-moon-toggle",
+    "react",
+    "button",
+    "toggle",
+    "component",
+    "UI component",
+    "javascript"
+  ]
 }
