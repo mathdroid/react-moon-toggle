@@ -8,6 +8,8 @@ const INDEX = Object.freeze({
   LIGHT: 4
 });
 
+const getNextPhase = phase => (phase === 7 ? 0 : phase + 1);
+
 const Toggle = ({
   dark,
   setDark = () => null,
@@ -20,13 +22,14 @@ const Toggle = ({
     dark ? darkIndex : lightIndex
   );
 
-  const [speed, setSpeed] = React.useState(0);
+  const [speed, setSpeed] = React.useState(null);
+  const [hovered, setHovered] = React.useState(false);
 
   const incrementPhase = () => {
-    const nextPhase = phaseIndex === 7 ? 0 : phaseIndex + 1;
+    const nextPhase = getNextPhase(phaseIndex);
     setPhaseIndex(nextPhase);
     if (nextPhase === (dark ? darkIndex : lightIndex)) {
-      setSpeed(0);
+      setSpeed(null);
     }
   };
 
@@ -35,11 +38,22 @@ const Toggle = ({
     setSpeed(interval);
   };
 
+  const onMouseEnter = () => {
+    setHovered(true);
+  };
+  const onMouseLeave = () => {
+    setHovered(false);
+  };
+
   useInterval(incrementPhase, speed);
 
   return (
-    <button type="button" {...props, onClick}>
-      {phases[phaseIndex]}
+    <button
+      type="button"
+      {...props}
+      {...{ onClick, onMouseEnter, onMouseLeave }}
+    >
+      {hovered ? phases[getNextPhase(phaseIndex)] : phases[phaseIndex]}
     </button>
   );
 };
