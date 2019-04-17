@@ -1,6 +1,6 @@
 # `react-moon-toggle`
 
-> Toggle dark mode (or anything) in moon phases
+> Toggle dark mode (or anything) in moon phases emoji
 
 <img src="moon.gif" width="400">
 
@@ -27,10 +27,16 @@ $ yarn add react-moon-toggle
 
 ```js
   dark, // boolean
-  setDark = () => null, // ?function
+  setDark = (newDark: boolean) => null, // ?function<boolean>
   interval = 50, // number
   darkIndex = INDEX.DARK, // number (0-7)
   lightIndex = INDEX.LIGHT, // number (0-7)
+```
+
+phases array used for indexes:
+
+```js
+const phases = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
 ```
 
 ## License
