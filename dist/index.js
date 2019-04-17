@@ -45,7 +45,9 @@ var Toggle = function Toggle(_ref) {
       darkIndex = _ref$darkIndex === undefined ? INDEX.DARK : _ref$darkIndex,
       _ref$lightIndex = _ref.lightIndex,
       lightIndex = _ref$lightIndex === undefined ? INDEX.LIGHT : _ref$lightIndex,
-      props = _objectWithoutProperties(_ref, ["dark", "setDark", "interval", "darkIndex", "lightIndex"]);
+      _ref$peekOnHover = _ref.peekOnHover,
+      peekOnHover = _ref$peekOnHover === undefined ? true : _ref$peekOnHover,
+      props = _objectWithoutProperties(_ref, ["dark", "setDark", "interval", "darkIndex", "lightIndex", "peekOnHover"]);
 
   var _React$useState = _react2.default.useState(dark ? darkIndex : lightIndex),
       _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -89,7 +91,7 @@ var Toggle = function Toggle(_ref) {
     _extends({
       type: "button"
     }, props, { onClick: onClick, onMouseEnter: onMouseEnter, onMouseLeave: onMouseLeave }),
-    hovered ? phases[getNextPhase(phaseIndex)] : phases[phaseIndex]
+    hovered && peekOnHover ? phases[getNextPhase(phaseIndex)] : phases[phaseIndex]
   );
 };
 
