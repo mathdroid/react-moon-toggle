@@ -39,6 +39,8 @@ phases array used for indexes:
 const phases = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
 ```
 
+Any other props will be given directly to the `<button>` element.
+
 ## License
 
 MIT
