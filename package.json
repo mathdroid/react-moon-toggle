@@ -1,10 +1,10 @@
 {
-  "peerDependencies": {
-    "react": "^16.3"
-  },
   "name": "react-moon-toggle",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel ./src --out-dir ./dist"
+  },
   "repository": "git@github.com:mathdroid/react-moon-toggle.git",
   "author": "<muhammad.mustadi@gmail.com>",
   "license": "MIT",
@@ -17,5 +17,14 @@
     "component",
     "UI component",
     "javascript"
-  ]
+  ],
+  "peerDependencies": {
+    "react": "^16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
 }
