@@ -16,6 +16,7 @@ const Toggle = ({
   interval = 50,
   darkIndex = INDEX.DARK,
   lightIndex = INDEX.LIGHT,
+  peekOnHover = true,
   ...props
 }) => {
   const [phaseIndex, setPhaseIndex] = React.useState(
@@ -53,7 +54,9 @@ const Toggle = ({
       {...props}
       {...{ onClick, onMouseEnter, onMouseLeave }}
     >
-      {hovered ? phases[getNextPhase(phaseIndex)] : phases[phaseIndex]}
+      {hovered && peekOnHover
+        ? phases[getNextPhase(phaseIndex)]
+        : phases[phaseIndex]}
     </button>
   );
 };

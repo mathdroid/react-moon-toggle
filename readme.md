@@ -25,12 +25,22 @@ $ yarn add react-moon-toggle
 
 ## Props
 
+- `dark` boolean (_required_)
+
+- `setDark` = `(newDark: boolean) => null` ?function<boolean>
+
+- `interval` = `50` number
+
+- `darkIndex` = `0` number (0-7)
+
+- `lightIndex` = `4` number (0-7)
+
+- `peekOnHover` = `true` boolean
+
+phases array used for indexes:
+
 ```js
-  dark, // boolean
-  setDark = (newDark: boolean) => null, // ?function<boolean>
-  interval = 50, // number
-  darkIndex = INDEX.DARK, // number (0-7)
-  lightIndex = INDEX.LIGHT, // number (0-7)
+const phases = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
 ```
 
 phases array used for indexes:
